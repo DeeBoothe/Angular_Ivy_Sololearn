@@ -1,0 +1,16 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<p>This movie I like is called {{title}}</p>
+
+<div *ngFor="let car of cars">
+  {{car.make}} {{car.model}} with a mileage of {{car.miles}}
+</div>
+
+<button (click)="speak()">Click here to Speak</button>
+
+<div *ngFor='let color of colors'>
+  {{color}}
+</div>
