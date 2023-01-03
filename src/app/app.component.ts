@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { TransportationService } from './transportation.service';
 import {Car} from './car';
 
 
@@ -25,9 +26,15 @@ export class AppComponent {
     this.counter++;
   }
 
-  subaru: Car ={make:"Subaru", model: "Outback", miles: 58262};
-  honda: Car ={make:'Honda', model: "Accord", miles:34501};
-  bmw: Car ={make:"BMW", model:"X3", miles: 4400};
+  cars: Car[];
 
-  cars:Car[]=[this.subaru, this.honda, this.bmw];
+    constructor (private transportationService: TransportationService){
+      this.cars = this.transportationService.getCars();
+    }
+
+
+
+  saySomething(){
+    alert('good day.')
+  }
 }

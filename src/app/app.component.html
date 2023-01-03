@@ -5,7 +5,7 @@
 
 <p>This movie I like is called {{title}}</p>
 
-<div *ngFor="let car of cars">
+<div >
   {{car.make}} {{car.model}} with a mileage of {{car.miles}}
 </div>
 
@@ -19,3 +19,5 @@
   <p>{{counter}}</p>
   <button (click)="addone()">Click to add 1</button>
 </div>
+
+<button (click)="saySomething()">Say Something</button>
